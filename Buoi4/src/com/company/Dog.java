@@ -39,4 +39,8 @@ public class Dog extends Animal {
     public void keu() {
         System.out.println("Gâu gâu");
     }
+
+    public void hienThiTen() {
+        System.out.println(ten);
+    }
 }
