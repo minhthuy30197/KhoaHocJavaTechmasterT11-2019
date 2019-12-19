@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.company.Controller">
+   <children>
+      <MenuBar fx:id="menuBar" layoutY="-2.0" prefHeight="40.0" prefWidth="800.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="btnOpen" mnemonicParsing="false" onAction="#Open" text="Open" />
+                  <MenuItem fx:id="btnSave" mnemonicParsing="false" onAction="#Save" text="Save" />
+                  <MenuItem fx:id="btnExit" mnemonicParsing="false" onAction="#Exit" text="Exit" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit" />
+          <Menu mnemonicParsing="false" text="Format" />
+            <Menu mnemonicParsing="false" text="View" />
+            <Menu mnemonicParsing="false" text="Help" />
+        </menus>
+      </MenuBar>
+      <TextArea fx:id="textarea" layoutY="38.0" prefHeight="563.0" prefWidth="800.0" />
+   </children>
+</AnchorPane>

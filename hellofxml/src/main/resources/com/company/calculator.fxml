@@ -10,10 +10,10 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.company.CalculatorController">
    <children>
-      <Label fx:id="title" layoutX="283.0" layoutY="56.0" text="Siêu máy tính" t
-            <Font size="39.0" />
-         </font>extFill="RED">
+      <Label fx:id="title" layoutX="283.0" layoutY="56.0" text="Siêu máy tính" textFill="RED">
          <font>
+            <Font size="39.0" />
+         </font>
       </Label>
       <TextField fx:id="tf3" layoutX="552.0" layoutY="185.0" />
       <TextField fx:id="tf2" layoutX="298.0" layoutY="185.0" />
