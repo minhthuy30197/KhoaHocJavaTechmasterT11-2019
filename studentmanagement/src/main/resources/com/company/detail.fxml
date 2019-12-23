@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+
+<AnchorPane prefHeight="420.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.company.DetailController">
+    <children>
+        <Label layoutX="319.0" layoutY="44.0" text="Thông tin chi tiết">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+        <Label layoutX="480.0" layoutY="153.0" text="Điện thoại">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+        <Label layoutX="480.0" layoutY="108.0" text="Email">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+        <Label layoutX="40.0" layoutY="153.0" text="Họ tên">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+        <Label layoutX="40.0" layoutY="108.0" text="Mã số">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+        <TextField fx:id="tfPhone" focusTraversable="false" layoutX="564.0" layoutY="150.0" />
+        <TextField fx:id="tfEmail" focusTraversable="false" layoutX="564.0" layoutY="105.0" />
+        <TextField fx:id="tfName" focusTraversable="false" layoutX="131.0" layoutY="153.0" />
+        <TextField fx:id="tfId" disable="true" editable="false" focusTraversable="false" layoutX="131.0" layoutY="108.0" />
+        <Button fx:id="btnBack" layoutX="40.0" layoutY="221.0" mnemonicParsing="false" onAction="#goBack" prefHeight="31.0" prefWidth="93.0" text="Quay lại" />
+        <Button fx:id="btnUpdate" layoutX="145.0" layoutY="221.0" mnemonicParsing="false" onAction="#updateInfo" prefHeight="31.0" prefWidth="137.0" text="Sửa thông tin" />
+    </children>
+</AnchorPane>

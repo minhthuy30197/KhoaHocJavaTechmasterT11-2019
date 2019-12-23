@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="421.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.company.ListController">
+    <children>
+        <TableView fx:id="table" focusTraversable="false" layoutX="320.0" layoutY="98.0" prefHeight="303.0" prefWidth="460.0">
+            <columns>
+                <TableColumn fx:id="idColumn" prefWidth="53.0" text="Mã số" />
+                <TableColumn fx:id="nameColumn" prefWidth="166.0" text="Họ tên" />
+                <TableColumn fx:id="emailColumn" prefWidth="145.0" text="Email" />
+                <TableColumn fx:id="phoneColumn" prefWidth="95.0" text="Điện thoại" />
+            </columns>
+        </TableView>
+        <Label layoutX="309.0" layoutY="34.0" text="Quản lý sinh viên">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+        <TextField fx:id="tfId" focusTraversable="false" layoutX="121.0" layoutY="98.0" />
+        <TextField fx:id="tfName" focusTraversable="false" layoutX="121.0" layoutY="143.0" />
+        <TextField fx:id="tfEmail" focusTraversable="false" layoutX="121.0" layoutY="190.0" />
+        <TextField fx:id="tfPhone" focusTraversable="false" layoutX="121.0" layoutY="238.0" />
+        <Label layoutX="30.0" layoutY="98.0" text="Mã số">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+        <Label layoutX="30.0" layoutY="143.0" text="Họ tên">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+        <Label layoutX="30.0" layoutY="190.0" text="Email">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+        <Label layoutX="30.0" layoutY="238.0" text="Điện thoại">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+        <Button fx:id="btnAdd" layoutX="30.0" layoutY="283.0" mnemonicParsing="false" onAction="#addNewStudent" prefHeight="25.0" prefWidth="70.0" text="Thêm" />
+        <Button fx:id="btnDetail" layoutX="114.0" layoutY="283.0" mnemonicParsing="false" onAction="#getDetail" prefHeight="25.0" prefWidth="70.0" text="Chi tiết" />
+        <Button fx:id="btnDelete" layoutX="200.0" layoutY="283.0" mnemonicParsing="false" onAction="#deleteStudent" prefHeight="25.0" prefWidth="70.0" text="Xóa" />
+    </children>
+</AnchorPane>
