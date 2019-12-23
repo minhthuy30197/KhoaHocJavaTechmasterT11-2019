@@ -20,6 +20,7 @@ public class App extends Application {
         scene = new Scene(loadFXML("notepad"));
         stage.setScene(scene);
         stage.setTitle("My notepad");
+        stage.setResizable(false);
         stage.show();
     }
 
