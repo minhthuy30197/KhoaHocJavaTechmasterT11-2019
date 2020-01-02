@@ -5,6 +5,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
+import java.io.IOException;
+
 public class DetailController {
 
     @FXML
@@ -26,13 +28,25 @@ public class DetailController {
     private TextField tfId;
 
     @FXML
-    void goBack(ActionEvent event) {
-
+    void goBack(ActionEvent event) throws IOException {
+        App.setRoot("manager");
     }
 
     @FXML
     void updateInfo(ActionEvent event) {
+        String name = tfName.getText();
+        String email = tfEmail.getText();
+        String phone = tfPhone.getText();
+        int id = Integer.parseInt(tfId.getText());
+        Student std = new Student(id, name, email, phone);
+        Repository.updateStudent(std, id);
+    }
 
+    void setData(Student std) {
+        tfEmail.setText(std.getEmail());
+        tfName.setText(std.getName());
+        tfId.setText(String.valueOf(std.getId()));
+        tfPhone.setText(std.getPhone());
     }
 
 }

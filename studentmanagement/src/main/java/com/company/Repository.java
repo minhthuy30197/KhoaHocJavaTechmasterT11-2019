@@ -21,4 +21,14 @@ public class Repository {
     public static void removeStudent(Student std) {
         list.remove(std);
     }
+
+    public static void updateStudent(Student std, int id) {
+        for (Student item : list) {
+            if (item.getId() == id) {
+                item.setPhone(std.getPhone());
+                item.setEmail(std.getEmail());
+                item.setName(std.getName());
+            }
+        }
+    }
 }

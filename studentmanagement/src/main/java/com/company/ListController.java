@@ -2,9 +2,14 @@ package com.company;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
@@ -67,7 +72,21 @@ public class ListController implements Initializable {
 
     @FXML
     void getDetail(ActionEvent event) throws IOException {
-        App.setRoot("detail");
+        // Chọn hàng cần xem chi tiết
+        Student std = table.getSelectionModel().getSelectedItem();
+        if (std != null) {
+            FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("detail.fxml"));
+            Parent parent = fxmlLoader.load();
+            DetailController controller = fxmlLoader.getController();
+            controller.setData(std);
+            App.setScene(new Scene(parent));
+        } else {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Cảnh báo");
+            alert.setHeaderText("Không hợp lệ");
+            alert.setContentText("Vui lòng chọn sinh viên cần xem chi tiết");
+            alert.showAndWait();
+        }
     }
 
     @FXML

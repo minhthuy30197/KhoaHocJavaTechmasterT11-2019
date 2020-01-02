@@ -16,6 +16,11 @@ public class App extends Application {
 
     private static Scene scene;
 
+    public static void setScene(Scene scene1) {
+        scene = scene1;
+        stage.setScene(scene);
+    }
+
     @Override
     public void start(Stage stage) throws IOException {
         this.stage = stage;
