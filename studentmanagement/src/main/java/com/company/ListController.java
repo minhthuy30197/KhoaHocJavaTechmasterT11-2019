@@ -4,13 +4,10 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.stage.Stage;
-
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -39,9 +36,6 @@ public class ListController implements Initializable {
     private Button btnDetail;
 
     @FXML
-    private TextField tfId;
-
-    @FXML
     private TableView<Student> table;
 
     @FXML
@@ -55,18 +49,16 @@ public class ListController implements Initializable {
 
     @FXML
     void addNewStudent(ActionEvent event) {
-        int mahs = Integer.parseInt(tfId.getText());
         String name = tfName.getText();
         String phone = tfPhone.getText();
         String email = tfEmail.getText();
-        Student std = new Student(mahs, name, email, phone);
+        Student std = new Student(name, email, phone);
 
         Repository.addStudent(std);
 
         // Reset textfield
         tfEmail.setText("");
         tfPhone.setText("");
-        tfId.setText("");
         tfName.setText("");
     }
 
